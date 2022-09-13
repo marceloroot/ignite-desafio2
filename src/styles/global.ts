@@ -25,4 +25,18 @@ export const GlobalStyle = createGlobalStyle`
   a{
     text-decoration:none;
   }
+
+  /* remove a seta do input number */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* fim remove a seta do input number */
+
+
 `
