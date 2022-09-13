@@ -1,5 +1,12 @@
+import { CompleteOrderForm } from "./components/CompleteOrderForm";
+import { SelectedCoofees } from "./components/SelectedCoofees";
+import { CompleateOrderContainer } from "./styels";
+
 export function CompleteOrderPage(){
     return(
-        <h1>Compelte Order</h1>
+      <CompleateOrderContainer className="container">
+        <CompleteOrderForm />
+        <SelectedCoofees />
+      </CompleateOrderContainer>
     )
 }
