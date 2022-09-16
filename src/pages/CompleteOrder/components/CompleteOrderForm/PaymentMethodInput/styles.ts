@@ -1,7 +1,28 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const PaymentMethodInputContainer = styled.div`
- padding:0 1rem;
+ input {
+   visibility: hidden;
+   appearance:none ;
+ }
+
+ /* quando input estiver marcado vou pegar a label depois dela o + e para ser depois */
+ input:checked + label div{
+   ${({theme}) =>css`
+   background: ${theme.colors["brand-purple-light"]};
+   border: ${theme.colors["brand-purple"]};
+
+      &:hover{
+         background: ${theme.colors["brand-purple-light"]};
+      }
+   `}
+  
+
+ }
+`;
+
+export const ContContainer = styled.div`
+padding:0 1rem;
  background-color:${({theme}) => theme.colors["base-button"]};
  color:${({theme}) => theme.colors["base-text"]};
  display:flex;
@@ -25,4 +46,6 @@ export const PaymentMethodInputContainer = styled.div`
 
  /* user-select a pessoa nao pode copiar */
  user-select:none;
-`;
+
+`
+ 
